@@ -1,0 +1,13 @@
+.container{
+	margin-top: 200px;
+	margin-left: 200px auto;
+	border: 5px solid #eee;
+	width: 40%;
+	text-align: center;
+	padding: 20px;
+	background-color: white;
+}
+
+body{
+	background-image: url('start_screenEdit.png')
+}
