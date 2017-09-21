@@ -15,10 +15,12 @@ var trashTalk = ['Get your scores up son',
                  "Let's see your skills",
                  'Where you at',
                  "Bet you can't make it past level 1",
-                 "Why are you even playing?",
+                 "Why are you even playing?!?",
                  "What are you new?!",
                  "I remember my first game",
-                 "My grandmother plays better and she's blind!!"
+                 "My grandmother plays better and she's blind!!",
+                 "GOML",
+                 "You got nothin on Xanthrax",
                  ];
 
 function followed(eventMsg){
@@ -27,10 +29,10 @@ function followed(eventMsg){
 	console.log(eventMsg.source);
 	
 
-	// var name = eventMsg.source.name;
-	// var screenName = eventMsg.source.screen_name;
-	// sendTweet("@" + screenName + " " + trashTalk[random]);
-	// console.log("follow event: " + screenName);
+	var name = eventMsg.source.name;
+	var screenName = eventMsg.source.screen_name;
+	sendTweet("@" + screenName + " " + trashTalk[random] + " https://benjamindanis.github.io/SpaceCowboy/");
+	console.log("follow event: " + screenName);
 }
 
 function mentioned(eventMsg){

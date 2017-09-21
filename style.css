@@ -9,5 +9,7 @@
 }
 
 body{
-	background-image: url('start_screenEdit.png')
+	background-image: url('start_screenEdit.png');
+	/*background-position: center;*/
+	background-repeat: no-repeat;
 }
