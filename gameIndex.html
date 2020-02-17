@@ -164,43 +164,48 @@ $(document).ready(function(){
     function preload() {
         // did this because og origin error
         game.load.crossOrigin = "anonymous";
-        game.load.image("background", "./images/new-background-2.png")
-        game.load.atlas('hero', "https://krnaegis.github.io/sprites/PlayerShip.png","https://krnaegis.github.io/sprites/PlayerShip.json")
-        game.load.atlas('laser', "https://krnaegis.github.io/sprites/Herolaser/Laser.png","https://krnaegis.github.io/sprites/Herolaser/Laser.json")
-        game.load.atlas('explosion', "https://krnaegis.github.io/sprites/explosion/Explosion.png","https://krnaegis.github.io/sprites/explosion/Explosion.json")
-        game.load.atlas('boss1', "https://krnaegis.github.io/sprites/Boss1/Boss1.png","https://krnaegis.github.io/sprites/Boss1/Boss1.json")
-        game.load.image("planet","https://ctabones.github.io/projectOne-images/coldPlanet.png");
-        game.load.image("enemy1", "https://krnaegis.github.io/sprites/EnemyShips/Enemy%20ship%20lvl%201.png");
-        game.load.image("enemy2", "https://krnaegis.github.io/sprites/EnemyShips/Enemy%20lvl%202.png");
-        game.load.image("enemy3", "https://krnaegis.github.io/sprites/EnemyShips/Enemy%20lvl%203.png")
-        game.load.image("enemyBullet1", "https://ctabones.github.io/projectOne-images/enemyBullet1.png");
-        game.load.image("flames", "https://ctabones.github.io/projectOne-images/flame_new.png");
-        game.load.image("upgradeLbl", "https://ctabones.github.io/projectOne-images/weaponUpgrade.png");
-        game.load.image("black-Background","https://ctabones.github.io/projectOne-images/black_screen.jpg");
-        game.load.image("startBtn","https://ctabones.github.io/projectOne-images/start_button.png");
-        game.load.image("gameOverImg", "https://ctabones.github.io/projectOne-images/gameover3.png")
+        
+        let imagesFolder = "https://cnjdev.github.io/SpaceCowboy/images/";
+        
+        game.load.image("background", imagesFolder+"new-background-2.png")
+        
+        game.load.atlas('hero', imagesFolder+"PlayerShip.png", imagesFolder+"PlayerShip.json")
+        game.load.atlas('laser', imagesFolder+"HeroLaser.png", imagesFolder+"HeroLaser.json")
+        game.load.atlas('explosion', imagesFolder+"Explosion.png", imagesFolder+"Explosion.json")
+        game.load.atlas('boss1', imagesFolder+"Boss1.png", imagesFolder+"Boss1.json")
+        
+        game.load.image("planet", imagesFolder+"coldPlanet.png");
+        game.load.image("enemy1", imagesFolder+"EnemyShip1.png");
+        game.load.image("enemy2", imagesFolder+"EnemyShip2.png");
+        game.load.image("enemy3", imagesFolder+"EnemyShip3.png")
+        game.load.image("enemyBullet1", imagesFolder+"enemyBullet1.png");
+        game.load.image("flames", imagesFolder+"flame_new.png");
+        game.load.image("upgradeLbl", imagesFolder+"weaponUpgrade.png");
+        game.load.image("black-Background", imagesFolder+"black_screen.jpg");
+        game.load.image("startBtn", imagesFolder+"start_button.png");
+        game.load.image("gameOverImg", imagesFolder+"gameover3.png")
 
         //planets
-        game.load.image("kamioBg","https://ctabones.github.io/projectOne-images/kamioBackground.jpg");
-        game.load.image("mustafarBg","https://ctabones.github.io/projectOne-images/mustafarBackground.jpg");
-        game.load.image("hothBg","https://ctabones.github.io/projectOne-images/hothBackground.jpg");
-        game.load.image("rodiaBg","https://ctabones.github.io/projectOne-images/rodiaBackground.png");
-        game.load.image("tatBg","https://ctabones.github.io/projectOne-images/tatooineBackGround.jpeg");
+        game.load.image("kamioBg", imagesFolder+"kamioBackground.jpg");
+        game.load.image("mustafarBg", imagesFolder+"mustafarBackground.jpg");
+        game.load.image("hothBg", imagesFolder+"hothBackground.jpg");
+        game.load.image("rodiaBg", imagesFolder+"rodiaBackground.png");
+        game.load.image("tatBg", imagesFolder+"tatooineBackGround.jpeg");
 
-        game.load.image("cold-planet","https://ctabones.github.io/projectOne-images/coldPlanet.png");
-        game.load.image("hot-planet","https://ctabones.github.io/projectOne-images/hotPlanet.png");
-        game.load.image("frozen-planet","https://ctabones.github.io/projectOne-images/frozenPlanet.png");
-        game.load.image("mild-planet","https://ctabones.github.io/projectOne-images/mildPlanet.png");
-        game.load.image("warm-planet","https://ctabones.github.io/projectOne-images/warmPlanet2.png");
-
+        game.load.image("cold-planet", imagesFolder+"coldPlanet.png");
+        game.load.image("hot-planet", imagesFolder+"hotPlanet.png");
+        game.load.image("frozen-planet", imagesFolder+"frozenPlanet.png");
+        game.load.image("mild-planet", imagesFolder+"mildPlanet.png");
+        game.load.image("warm-planet", imagesFolder+"warmPlanet2.png");
 
         //Audio 
-        game.load.audio("blaster", "https://ctabones.github.io/projectOne-images/panlaser.mp3")
-        game.load.audio("game_over", "https://ctabones.github.io/projectOne-images/game_over.wav")
-        game.load.audio("backGround-music", "https://ctabones.github.io/projectOne-images/kick_shock.wav")
-        game.load.audio("booster", "https://ctabones.github.io/projectOne-images/booster.wav")
-        game.load.audio("enemyExp", "https://ctabones.github.io/projectOne-images/enemyExplode.wav")
-        game.load.audio("showPlanets", "https://ctabones.github.io/projectOne-images/showPlanets.mp3")        
+        let audioFolder = "https://cnjdev.github.io/SpaceCowboy/audio/";
+        game.load.audio("blaster", audioFolder+"panlaser.mp3")
+        game.load.audio("game_over", audioFolder+"game_over.wav")
+        game.load.audio("backGround-music", audioFolder+"kick_shock.wav")
+        game.load.audio("booster", audioFolder+"booster.wav")
+        game.load.audio("enemyExp", audioFolder+"enemyExplode.wav")
+        game.load.audio("showPlanets", audioFolder+"showPlanets.mp3")        
 
     }
     // runs on one frame and places 

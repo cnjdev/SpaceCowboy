@@ -31,7 +31,7 @@ function followed(eventMsg){
 
 	var name = eventMsg.source.name;
 	var screenName = eventMsg.source.screen_name;
-	sendTweet("@" + screenName + " " + trashTalk[random] + " https://benjamindanis.github.io/SpaceCowboy/");
+	sendTweet("@" + screenName + " " + trashTalk[random] + " https://cnjdev.github.io/SpaceCowboy/");
 	console.log("follow event: " + screenName);
 }
 
